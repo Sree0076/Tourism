@@ -1,0 +1,7 @@
+
+<ng-container *ngIf="hideChildren; else loginTemplate">
+  <app-signup (hideChange)="onChildHideChange($event)"></app-signup>
+</ng-container>
+<ng-template #loginTemplate>
+  <app-login (hideChange)="onChildHideChange($event)" ></app-login>
+</ng-template>

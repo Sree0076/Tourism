@@ -1,0 +1,49 @@
+
+<div class="body">
+  <div class="login_form">
+    <!-- Login form container -->
+    <form action="#" [formGroup]="loginform" >
+      <h3>Log in with</h3>
+
+
+
+      <!-- Login option separator -->
+      <p class="separator">
+        <span>Enter the Details</span>
+      </p>
+
+      <!-- Email input box -->
+      <div class="input_box">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter email address"   formControlName="email" [class.error-border]="loginform.controls['email'].invalid && (loginform.controls['email'].dirty || loginform.controls['email'].touched) || loginform.controls['email'].hasError('required')"/>
+        <div *ngIf="loginform.controls['email'].invalid && (loginform.controls['email'].dirty || loginform.controls['email'].touched)" >
+          <div *ngIf="loginform.controls['email'].hasError('required')" class="inputbox">
+            email is required.
+          </div>
+      </div>
+      </div>
+
+      <!-- Paswwrod input box -->
+      <div class="input_box">
+        <div class="password_title">
+          <label for="password">Password</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <input type="password" id="password" placeholder="Enter your password" formControlName="password"  />
+        <div *ngIf="loginform.controls['password'].invalid && (loginform.controls['password'].dirty || loginform.controls['email'].touched)" >
+          <div *ngIf="loginform.controls['password'].hasError('required')">
+           Password Required
+          </div>
+        </div>
+          <div *ngIf="loginform.controls['password'].hasError('minlength')">
+            Password is too short.
+          </div>
+      </div>
+       <!-- Login button -->
+      <button type="submit" [disabled]="loginform.invalid" class="btn btn-success">Log In</button>
+    </form>
+      <p class="sign_up">Don't have an account? <a (click)="toggleVisibility()">Sign up</a></p>
+
+  </div>
+</div>
+

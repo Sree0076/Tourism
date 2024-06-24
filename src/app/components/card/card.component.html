@@ -1,0 +1,19 @@
+
+<div class="destination-main__experiences">
+@for(item of data;track item.id)
+{
+<a class="category-card" href="">
+  <div class="category-card__image">
+  <img src="" [src]="item.imageUrl" set="" alt="" sizes="(max-width: 0px) 100vw, 0px" class="lazyloaded" data-ll-status="loaded"><noscript><img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/v1660754361/Ganges/Ganges.jpg" srcset="" sizes="(max-width: 0px) 100vw, 0px" alt=""></noscript>
+  </div>
+
+  <div class="category-card__content">
+  <h3 class="category-card__content__title">
+    {{item.title}}
+  </h3>
+  <div class="category-card__content__availability">
+    {{item.description}}                          </div>
+  </div>
+  </a>
+}
+</div>
