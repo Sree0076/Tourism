@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }
 
 body {
@@ -42,7 +43,7 @@ body {
   overflow-y: auto; /* Enable vertical scrolling */
   padding-right: 15px; /* Compensate for scrollbar space */
   scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
 }
 
 .form .input-box {

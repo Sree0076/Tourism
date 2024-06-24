@@ -11,13 +11,13 @@ import { FormControl, FormGroup, ReactiveFormsModule,Validators } from '@angular
 })
 export class LoginComponent {
   loginform = new FormGroup({
-    email: new FormControl('@gamil',Validators.required),
+    email: new FormControl('',Validators.required),
     password: new FormControl('',[Validators.required,Validators.minLength(4),]),
 
   });
 
   @Output() hideChange = new EventEmitter<boolean>();
-  
+
   isHidden: boolean = true;
 
   toggleVisibility() {

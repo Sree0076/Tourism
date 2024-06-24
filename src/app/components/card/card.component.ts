@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-
+import {  EventEmitter, Output } from '@angular/core';
 interface District {
   id: number;
   title: string;
@@ -16,6 +16,6 @@ interface District {
 
 
 export class CardComponent {
-  @Input() data: any[] =[];
 
+  @Input() data: any[] =[];
 }
