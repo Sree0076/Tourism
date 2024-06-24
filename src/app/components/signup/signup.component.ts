@@ -2,6 +2,7 @@ import { DatePipe } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import {FormControl} from '@angular/forms'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +17,7 @@ export class SignupComponent {
 
 
  formattedDate:String | null= null
-  constructor(private datePipe: DatePipe) {}
+  constructor(private datePipe: DatePipe,private router: Router) {}
 
   formatBirthDate(birthdate:Date):String |null {
 
@@ -32,6 +33,7 @@ export class SignupComponent {
 
 signup(form: any) {
   form.value.dob=this.formatBirthDate(form.value.dob)
+  this.router.navigate(['/']);
   console.log(form.value);
 }
 

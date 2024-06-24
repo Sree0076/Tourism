@@ -5,6 +5,7 @@ import { AuthComponent } from './pages/auth/auth.component';
 import { DestinationComponent } from './pages/destination/destination.component';
 import { ActivitiesComponent } from './pages/activities/activities.component';
 import { EachdestinationComponent } from './pages/eachdestination/eachdestination.component';
+import { FestivalsComponent } from './pages/festivals/festivals.component';
 
 export const routes: Routes = [
 
@@ -14,5 +15,6 @@ export const routes: Routes = [
   {path: 'destination', component: DestinationComponent},
   {path: 'activities', component: ActivitiesComponent},
   {path: 'each/:id', component: EachdestinationComponent},
+  {path: 'festivals', component: FestivalsComponent},
   {path: 'about', component: AboutComponent},
 ];

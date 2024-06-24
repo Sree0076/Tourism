@@ -1,18 +1,22 @@
+<div class="deals-hero__row">
 
-<div class="destination-main__experiences">
   @for(item of data;track item.id)
   {
-  <a class="category-card" href="">
-    <div class="category-card__image">
-    <img src="" [src]="item.image" set="" alt="" sizes="(max-width: 0px) 100vw, 0px" class="lazyloaded" data-ll-status="loaded"><noscript><img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/v1660754361/Ganges/Ganges.jpg" srcset="" sizes="(max-width: 0px) 100vw, 0px" alt=""></noscript>
-    </div>
-    <div class="category-card__content">
-    <h3 class="category-card__content__title" >
-      {{item.name}}
-    </h3>
-    <div class="category-card__content__availability">
-      {{item.description}}                          </div>
-    </div>
-    </a>
+    <a class="deal-card" href="">
+      <div class="deal-card__image">
+          <img [src]="item.places_to_visit[0].image" srcset="" alt="Two sea lions on the beach" sizes="(max-width: 0px) 100vw, 0px" class="lazyloaded" data-ll-status="loaded"><noscript>
+
+          </noscript>
+      </div>
+      <div class="deal-card__content">
+          <h2 class="deal-card__content__title">
+            {{item.places_to_visit[0].name}}               </h2>
+          <div class="deal-card__content__cta">
+              <p >
+                {{item.places_to_visit[0].description}}
+              </p>
+          </div>
+      </div>
+  </a>
   }
-  </div>
+</div>

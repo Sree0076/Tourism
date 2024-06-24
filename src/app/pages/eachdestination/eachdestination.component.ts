@@ -12,8 +12,7 @@ import { CarouselComponent } from "../../components/carousel/carousel.component"
 })
 export class EachdestinationComponent {
 
-   district:any
-   district_description:String='';
+
     constructor(private route:ActivatedRoute)
     {
 
@@ -52,6 +51,8 @@ export class EachdestinationComponent {
         console.error('Error fetching data:', error);
       }
     };
+    district:any
+    district_description:String='';
 
 }
 
